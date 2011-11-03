@@ -1,3 +1,9 @@
+# revision 19440
+# category Package
+# catalog-ctan /macros/generic/diagrams/dcpic
+# catalog-date 2009-12-22 14:54:36 +0100
+# catalog-license lppl
+# catalog-version 4.3.2
 Name:		texlive-dcpic
 Version:	4.3.2
 Release:	1
@@ -43,6 +49,7 @@ positioned in a Cartesian coordinate system.
 %doc %{_texmfdistdir}/doc/generic/dcpic/README
 %doc %{_texmfdistdir}/doc/generic/dcpic/README.TEXLIVE
 %doc %{_texmfdistdir}/doc/generic/dcpic/examples.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -53,3 +60,5 @@ positioned in a Cartesian coordinate system.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
