@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 DCpic is a package for typesetting Commutative Diagrams within
@@ -28,20 +26,12 @@ specification syntax in which a commutative diagram is
 described in terms of its objects and its arrows (morphism),
 positioned in a Cartesian coordinate system.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -50,7 +40,6 @@ positioned in a Cartesian coordinate system.
 %doc %{_texmfdistdir}/doc/generic/dcpic/README
 %doc %{_texmfdistdir}/doc/generic/dcpic/README.TEXLIVE
 %doc %{_texmfdistdir}/doc/generic/dcpic/examples.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -61,5 +50,3 @@ positioned in a Cartesian coordinate system.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
