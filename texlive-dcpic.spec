@@ -1,16 +1,16 @@
-# revision 19440
+# revision 30206
 # category Package
 # catalog-ctan /macros/generic/diagrams/dcpic
-# catalog-date 2009-12-22 14:54:36 +0100
-# catalog-license lppl
-# catalog-version 4.3.2
+# catalog-date 2013-05-02 01:06:38 +0200
+# catalog-license lppl1.3
+# catalog-version 5.0.0
 Name:		texlive-dcpic
-Version:	4.3.2
-Release:	2
+Version:	5.0.0
+Release:	1
 Summary:	Commutative diagrams in a LaTeX and TeX documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/diagrams/dcpic
-License:	LPPL
+License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dcpic.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dcpic.doc.tar.xz
 BuildArch:	noarch
@@ -37,9 +37,16 @@ positioned in a Cartesian coordinate system.
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/tex/generic/dcpic/dcpic.sty
+%{_texmfdistdir}/tex/generic/dcpic/europroc.cls
 %doc %{_texmfdistdir}/doc/generic/dcpic/README
-%doc %{_texmfdistdir}/doc/generic/dcpic/README.TEXLIVE
+%doc %{_texmfdistdir}/doc/generic/dcpic/eurotex2001.pdf
+%doc %{_texmfdistdir}/doc/generic/dcpic/eurotex2001.tex
+%doc %{_texmfdistdir}/doc/generic/dcpic/examples.pdf
 %doc %{_texmfdistdir}/doc/generic/dcpic/examples.tex
+%doc %{_texmfdistdir}/doc/generic/dcpic/manDCPiC.pdf
+%doc %{_texmfdistdir}/doc/generic/dcpic/manDCPiC.tex
+%doc %{_texmfdistdir}/doc/generic/dcpic/manDCPiCpt.pdf
+%doc %{_texmfdistdir}/doc/generic/dcpic/manDCPiCpt.tex
 
 #-----------------------------------------------------------------------
 %prep
@@ -50,17 +57,3 @@ positioned in a Cartesian coordinate system.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 4.3.2-2
-+ Revision: 750879
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 4.3.2-1
-+ Revision: 718208
-- texlive-dcpic
-- texlive-dcpic
-- texlive-dcpic
-- texlive-dcpic
-
