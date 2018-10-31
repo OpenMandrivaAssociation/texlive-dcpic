@@ -6,7 +6,7 @@
 # catalog-version 5.0.0
 Name:		texlive-dcpic
 Version:	5.0.0
-Release:	9
+Release:	10
 Summary:	Commutative diagrams in a LaTeX and TeX documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/diagrams/dcpic
