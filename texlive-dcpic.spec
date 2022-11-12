@@ -1,18 +1,12 @@
-# revision 30206
-# category Package
-# catalog-ctan /macros/generic/diagrams/dcpic
-# catalog-date 2013-05-02 01:06:38 +0200
-# catalog-license lppl1.3
-# catalog-version 5.0.0
 Name:		texlive-dcpic
-Version:	5.0.0
-Release:	10
+Version:	30206
+Release:	1
 Summary:	Commutative diagrams in a LaTeX and TeX documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/diagrams/dcpic
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dcpic.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dcpic.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dcpic.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dcpic.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +21,12 @@ described in terms of its objects and its arrows (morphism),
 positioned in a Cartesian coordinate system.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -50,7 +44,7 @@ positioned in a Cartesian coordinate system.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
