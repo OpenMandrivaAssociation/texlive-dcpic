@@ -1,6 +1,6 @@
 Name:		texlive-dcpic
 Version:	30206
-Release:	1
+Release:	2
 Summary:	Commutative diagrams in a LaTeX and TeX documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/diagrams/dcpic
