@@ -3,7 +3,7 @@ Version:	30206
 Release:	2
 Summary:	Commutative diagrams in a LaTeX and TeX documents
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/generic/diagrams/dcpic
+URL:		https://www.ctan.org/tex-archive/macros/generic/diagrams/dcpic
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dcpic.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dcpic.doc.r%{version}.tar.xz
